@@ -271,3 +271,8 @@ captures/
 *.DS_Store
 
 .MWebMetaData/
+
+# Android Studio
+.classpath
+.project
+.settings

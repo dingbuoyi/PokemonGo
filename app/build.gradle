@@ -1,5 +1,6 @@
 import com.hi.dhl.plugin.*
-plugins{
+
+plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
@@ -56,6 +57,7 @@ dependencies {
     implementation Depend.timber
     implementation Room.runtime
     implementation Room.ktx
+    kapt("org.xerial:sqlite-jdbc:3.34.0")
     kapt Room.compiler
     implementation Anko.common
     implementation AndroidX.cardview
@@ -67,11 +69,12 @@ dependencies {
     implementation AndroidX.appStartup
     implementation Android.meteria
 
-    implementation Hilt.daggerRuntime
-    kapt Hilt.daggerCompiler
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
-    implementation Hilt.viewModule
-    kapt Hilt.compiler
+    def androidx_hilt_version = "1.0.0-alpha01"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$androidx_hilt_version"
+    kapt "androidx.hilt:hilt-compiler:$androidx_hilt_version"
 
     implementation Depend.jDatabinding
     implementation Depend.progressview
