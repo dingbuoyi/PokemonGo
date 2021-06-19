@@ -1,6 +1,5 @@
 package com.hi.dhl.pokemon.ui.main
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
@@ -9,10 +8,12 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.hi.dhl.pokemon.data.repository.Repository
 import com.hi.dhl.pokemon.model.PokemonItemModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.channels.ConflatedBroadcastChannel
 import kotlinx.coroutines.flow.*
+import javax.inject.Inject
 
 /**
  * <pre>
@@ -24,7 +25,8 @@ import kotlinx.coroutines.flow.*
 
 @FlowPreview
 @ExperimentalCoroutinesApi
-class MainViewModel @ViewModelInject constructor(
+@HiltViewModel
+class MainViewModel @Inject constructor(
     private val pokemonRepository: Repository
 ) : ViewModel() {
 

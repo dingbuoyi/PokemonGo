@@ -1,12 +1,12 @@
 package com.hi.dhl.pokemon.ui.detail
 
 import androidx.databinding.ObservableBoolean
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.*
 import com.hi.dhl.pokemon.data.remote.doFailure
 import com.hi.dhl.pokemon.data.remote.doSuccess
 import com.hi.dhl.pokemon.data.repository.Repository
 import com.hi.dhl.pokemon.model.PokemonInfoModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.catch
@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.onCompletion
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /**
  * <pre>
@@ -23,9 +24,10 @@ import kotlinx.coroutines.launch
  * </pre>
  */
 
+@HiltViewModel
 @FlowPreview
 @ExperimentalCoroutinesApi
-class DetailViewModel @ViewModelInject constructor(
+class DetailViewModel @Inject constructor(
     private val pokemonRepository: Repository
 ) : ViewModel() {
     val mLoading = ObservableBoolean()

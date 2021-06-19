@@ -16,10 +16,6 @@ object Versions {
     const val constraintlayout = "2.0.4"
     const val paging = "3.0.0-alpha02"
     const val timber = "4.7.1"
-    const val kotlin = "1.4.20"
-    const val kotlinCoroutinesCore = "1.3.7"
-    const val kotlinCoroutinesAndrid = "1.3.6"
-    const val koin = "2.1.5"
     const val work = "2.2.0"
     const val room = "2.3.0-alpha01"
     const val cardview = "1.0.0"
@@ -33,8 +29,6 @@ object Versions {
     const val jDatabinding = "1.0.4"
     const val progressview = "1.0.2"
     const val runtime = "1.1.0"
-    const val hit = "2.28-alpha"
-    const val hitViewModule = "1.0.0-alpha01"
     const val appStartup = "1.0.0"
     const val material = "1.2.1"
 }
@@ -59,13 +53,6 @@ object Android {
     const val meteria = "com.google.android.material:material:${Versions.material}"
 }
 
-object Hilt {
-    const val daggerRuntime = "com.google.dagger:hilt-android:${Versions.hit}"
-    const val daggerCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hit}"
-    const val viewModule = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hitViewModule}"
-    const val compiler = "androidx.hilt:hilt-compiler:${Versions.hitViewModule}"
-}
-
 object Coil {
     const val runtime = "io.coil-kt:coil:${Versions.runtime}"
 }
@@ -82,24 +69,6 @@ object Fragment {
     const val runtime = "androidx.fragment:fragment:${Versions.fragment}"
     const val runtimeKtx = "androidx.fragment:fragment-ktx:${Versions.fragment}"
     const val testing = "androidx.fragment:fragment-testing:${Versions.fragment}"
-}
-
-object Kt {
-    const val stdlibJdk7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
-    const val stdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
-    const val coroutinesCore =
-        "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.kotlinCoroutinesCore}"
-    const val coroutinesAndroid =
-        "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.kotlinCoroutinesAndrid}"
-    const val test = "org.jetbrains.kotlin:kotlin-test-junit:${Versions.kotlin}"
-    const val plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
-}
-
-object Koin {
-    const val core = "org.koin:koin-core:${Versions.koin}"
-    const val androidCore = "org.koin:koin-android:${Versions.koin}"
-    const val viewmodel = "org.koin:koin-androidx-viewmodel:${Versions.koin}"
-    const val androidScope = "org.koin:koin-android-scope:$${Versions.koin}"
 }
 
 object Anko {
